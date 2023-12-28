@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class=" wrapper bg-gradient-to-r from-sky-500 to-indigo-500 text-white overflow-hidden">
+        <!-- Heading Section -->
+        <h1 class="text-center font-sans font-bold uppercase py-5 text-4xl">Weather App</h1>
+
+        <div class=" tabContainer flex justify-center m-16 cursor-pointer">
+            <p class="tab currentTab userWeather px-40 text-xl">Your Weather</p>
+            <p class="tab searchWeather px-40 text-xl">Search Weather</p>
+        </div>
+
+        <!-- Container -->
+        <div class=" container flex flex-row justify-center">
+            <form class="formContainer searchForm">
+                <input type="text" placeholder="Search for City...." class="m-20">
+            </form>
+            <button class="btn" type="submit">
+                <img src="./Images/search.png" width="20" height="20" loading="lazy">
+            </button>
+        </div>
+
+
+        <!-- Grant Location Container -->
+        <div class=" grantLocationContainer subContainer flex flex-col items-center gap-3">
+            <img src="./Images/location.png" width="150px" height="150px" loading="lazy">
+            <p class="font-mono text-3xl">Grant Location Access</p>
+            <p class="font-mono">Allow access to get weather information</p>
+            <button class=" btn grantAccess font-mono uppercase bg-blue-400 px-5 rounded-sm">Grant Access</button>
+        </div>
+
+        <!-- Loading GIf -->
+        <div class="subContainer loadingContainer">
+            <img src="./Images/loading.gif" width="150px" height="150px">
+            <p>Loading</p>
+        </div>
+
+        <!-- Weather Info -->
+        <div class="userInfoContainer subContainer">
+            <!-- Text and flag -->
+            <div class="name">
+                <p class="cityName"></p>
+                <img class="countryFlag">
+            </div>
+
+            <p class="weatherDesc"></p>
+            <img class="weatherIcon">
+
+            <p class="temp"></p>
+
+            <div class="parameterContainer">
+                <!-- Windspeed -->
+                <div class="parameter">
+                    <img src="./Images/wind.png">
+                    <p>WindSpeed</p>
+                    <p class="parameterValue windspeed"></p>
+                </div>
+
+                <!-- Humidity -->
+                <div class="parameter">
+                    <img src="./Images/humidity.png">
+                    <p>Humidity</p>
+                    <p class="parameterValue humidity"></p>
+                </div>
+
+                <!-- Clouds -->
+                <div class="parameter">
+                    <img src="./Images/cloud.png">
+                    <p>Clouds</p>
+                    <div class="parameterValue clouds"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
